@@ -1,1 +1,1 @@
-web: gunicorn dj-project.wsgi
+web: gunicorn joytan_kanji.wsgi
