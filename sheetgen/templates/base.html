@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <title>Joytan Kanji Sheet Generator</title>
+
+
+    <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">
+        <img src="/static/images/joytan.png" width="30" height="30" alt="">
+      </a> #NOTE SOME USED TAGSjustify-content-md-center justify-content-start
+    </nav> -->
+  </head>
+
+  <body>
+      <nav class="navbar navbar-fixed-top navbar-dark navbar-expand bg-dark">
+          <a class="navbar-brand" href=""><img src="/static/images/joytan.png" width="35" height="35" alt=""></a>
+          <button class="navbar-toggler ml-1" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="navbar-collapse collapse justify-content-between align-items-center w-100" id="collapsingNavbar">
+              <ul class="navbar-nav mx-autotext-left">
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">Samples</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">Donate</a>
+                  </li>
+                  <!-- <li class="nav-item my-auto">
+                      <a class="nav-link navbar-brand mx-0 d-none d-md-inline" href="">Brand</a>
+                  </li> -->
+              </ul>
+              <ul class="nav navbar-nav flex-row justify-content-md-center justify-content-start flex-nowrap">
+                  <li class="nav-item"><a class="nav-link" href="https://www.youtube.com/c/JoytanApp"><i class="fa fa-youtube-play fa-2x"></i></a> </li>
+                  <li class="nav-item"><a class="nav-link" href="https://github.com/kokimame/joytan"><i class="fa fa-github fa-2x"></i></a> </li>
+              </ul>
+          </div>
+      </nav>
+
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12">
+          <h2 class="mt-2">Joytan Kanji Sheet Generator</h2>
+          <hr class="mt-0 mb-2" />
+          {% block content %}
+          {% endblock %}
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

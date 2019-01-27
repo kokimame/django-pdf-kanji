@@ -1,0 +1,205 @@
+{% extends 'base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+  <form action="{% url 'export' %}" method="get">
+    {% csrf_token %}
+      {{ form.text_field|as_crispy_field }}
+      <div class="form-group">
+      <button type="submit" class="btn btn-success">Generate PDFs / ぴーでぃえふ化</button>
+    </div>
+  </form>
+
+  <hr />
+
+  <p>
+    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false">
+      小1 (Grade 1, 80 characters)
+    </button>
+  </p>
+  <div class="show" id="collapseOne">
+    <div class="card card-body">
+      一 右 雨 円 王 音 下 火 花 貝 学 気 九 休 玉 金 空 月 犬 見 五 口 校 左 三 山 子 四
+      糸 字 耳 七 車 手 十 出 女 小 上 森 人 水 正 生 青 夕 石 赤 千 川 先 早 草 足 村 大
+      男 竹 中 虫 町 天 田 土 二 日 入 年 白 八 百 文 木 本 名 目 立 力 林 六
+    </div>
+  </div>
+
+  <p>
+    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false">
+      小2 (Grade 2, 160 characters)
+    </button>
+  </p>
+  <div class="collapse" id="collapseTwo">
+    <div class="card card-body">
+      引 羽 雲 園 遠 何 科 夏 家 歌 画 回 会 海 絵 外 角 楽 活 間 丸 岩 顔 汽 記 帰 弓 牛
+      魚 京 強 教 近 兄 形 計 元 言 原 戸 古 午 後 語 工 公 広 交 光 考 行 高 黄 合 谷 国
+      黒 今 才 細 作 算 止 市 矢 姉 思 紙 寺 自 時 室 社 弱 首 秋 週 春 書 少 場 色 食 心
+      新 親 図 数 西 声 星 晴 切 雪 船 線 前 組 走 多 太 体 台 地 池 知 茶 昼 長 朝 直 通
+      弟 店 点 電 刀 冬 当 東 答 頭 同 道 読 内 南 肉 馬 売 買 麦 半 番 父 風 分 聞 米 歩
+      母 方 北 毎 妹 万 明 鳴 毛 門 夜 野 友 用 曜 来 里 理 話
+    </div>
+  </div>
+
+  <p>
+    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false">
+      小3 (Grade 3, 200 characters)
+    </button>
+  </p>
+  <div class="collapse" id="collapseThree">
+    <div class="card card-body">
+      悪 安 暗 医 委 意 育 員 院 飲 運 泳 駅 央 横 屋 温 化 荷 界 開 階 寒 感 漢 館
+      起 期 客 究 急 級 宮 球 去 橋 業 曲 局 銀 区 苦 具 君 係 軽 血 決 研 県 庫 湖 向 幸
+      港 号 根 祭 皿 仕 死 使 始 指 歯 詩 次 事 持 式 実 写 者 主 守 取 酒 受 州 拾 終 習
+      集 住 重 宿 所 暑 助 昭 消 商 章 勝 乗 植 申 身 神 真 深 進 世 整 昔 全 相 送 想 息
+      速 族 他 打 対 待 代 第 題 炭 短 談 着 注 柱 丁 帳 調 追 定 庭 笛 鉄 転 都 度 投 豆
+      島 湯 登 等 動 童 農 波 配 倍 箱 畑 発 反 坂 板 皮 悲 美 鼻 筆 氷 表 秒 病 品 負 部
+      服 福 物 平 返 勉 放 味 命 面 問 役 薬 由 油 有 遊 予 羊 洋 葉 陽 様 落 流 旅 両 緑
+      礼 列 練 路 和
+    </div>
+  </div>
+
+  <p>
+    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false">
+      小4 (Grade 4, 202 characters)
+    </button>
+  </p>
+  <div class="collapse" id="collapseFour">
+    <div class="card card-body">
+      愛 案 以 衣 位 茨 印 英 栄 媛 塩 岡 億 加 果 貨 課 芽 賀 改 械 害 街 各 覚 潟 完 官
+      管 関 観 願 岐 希 季 旗 器 機 議 求 泣 給 挙 漁 共 協 鏡 競 極 熊 訓 軍 郡 群 径 景
+      芸 欠 結 建 健 験 固 功 好 香 候 康 佐 差 菜 最 埼 材 崎 昨 札 刷 察 参 産 散 残 氏
+      司 試 児 治 滋 辞 鹿 失 借 種 周 祝 順 初 松 笑 唱 焼 照 城 縄 臣 信 井 成 省 清 静
+      席 積 折 節 説 浅 戦 選 然 争 倉 巣 束 側 続 卒 孫 帯 隊 達 単 置 仲 沖 兆 低 底 的
+      典 伝 徒 努 灯 働 特 徳 栃 奈 梨 熱 念 敗 梅 博 阪 飯 飛 必 票 標 不 夫 付 府 阜 富
+      副 兵 別 辺 変 便 包 法 望 牧 末 満 未 民 無 約 勇 要 養 浴 利 陸 良 料 量 輪 類 令
+      冷 例 連 老 労 録
+    </div>
+  </div>
+
+  <p>
+    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false">
+      小5 (Grade 5, 193 characters)
+    </button>
+  </p>
+  <div class="collapse" id="collapseFive">
+    <div class="card card-body">
+      圧 囲 移 因 永 営 衛 易 益 液 演 応 往 桜 可 仮 価 河 過 快 解 格 確 額 刊 幹 慣 眼
+      紀 基 寄 規 喜 技 義 逆 久 旧 救 居 許 境 均 禁 句 型 経 潔 件 険 検 限 現 減 故 個
+      護 効 厚 耕 航 鉱 構 興 講 告 混 査 再 災 妻 採 際 在 財 罪 殺 雑 酸 賛 士 支 史 志
+      枝 師 資 飼 示 似 識 質 舎 謝 授 修 述 術 準 序 招 証 象 賞 条 状 常 情 織 職 制 性
+      政 勢 精 製 税 責 績 接 設 絶 祖 素 総 造 像 増 則 測 属 率 損 貸 態 団 断 築 貯 張
+      停 提 程 適 統 堂 銅 導 得 毒 独 任 燃 能 破 犯 判 版 比 肥 非 費 備 評 貧 布 婦 武
+      復 複 仏 粉 編 弁 保 墓 報 豊 防 貿 暴 脈 務 夢 迷 綿 輸 余 容 略 留 領 歴
+    </div>
+  </div>
+
+  <p>
+    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false">
+      小6 (Grade 6, 191 characters)
+    </button>
+  </p>
+  <div class="collapse" id="collapseSix">
+    <div class="card card-body">
+      胃 異 遺 域 宇 映 延 沿 恩 我 灰 拡 革 閣 割 株 干 巻 看 簡 危 机 揮 貴 疑 吸 供 胸
+      郷 勤 筋 系 敬 警 劇 激 穴 券 絹 権 憲 源 厳 己 呼 誤 后 孝 皇 紅 降 鋼 刻 穀 骨 困
+      砂 座 済 裁 策 冊 蚕 至 私 姿 視 詞 誌 磁 射 捨 尺 若 樹 収 宗 就 衆 従 縦 縮 熟 純
+      処 署 諸 除 承 将 傷 障 蒸 針 仁 垂 推 寸 盛 聖 誠 舌 宣 専 泉 洗 染 銭 善 奏 窓 創
+      装 層 操 蔵 臓 存 尊 退 宅 担 探 誕 段 暖 値 宙 忠 著 庁 頂 腸 潮 賃 痛 敵 展 討 党
+      糖 届 難 乳 認 納 脳 派 拝 背 肺 俳 班 晩 否 批 秘 俵 腹 奮 並 陛 閉 片 補 暮 宝 訪
+      亡 忘 棒 枚 幕 密 盟 模 訳 郵 優 預 幼 欲 翌 乱 卵 覧 裏 律 臨 朗 論
+    </div>
+  </div>
+
+
+  <p>
+    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseRest" aria-expanded="false">
+      Rest of jōyō kanji (1112 characters)
+    </button>
+  </p>
+  <div class="collapse" id="collapseRest">
+    <div class="card card-body">
+      喩 斜 蔑 奔 圏 炉 諾 甘 詳 核 酪 充 附 猿 偏 慰 埋 津 誘 駒 狭 楷 塡 唇 催 劣 隻 虜 匂 壊 慮 堀 玄 随 懲 曹 貞 豪 斬 隙 扇 履 摘 渇 郎 患 畔 椎 塁 廉 撤 猟 喪 涼 緒 徐 欧 削 芝 鳥 采 乏 寮 督 鬱 詠 泊 翁 軒 絡 狂 妖 依 潰 拓 携 互 侵 躍 傾 昆 衝 斉 隷 挨 逃 懐 磨 汗 攻 帆 還 嫁 綻 浜 抗 黙 丹 祉 雌 桃 粧 穂 怖 璽 閑 怪 凡 堕 虹 茎 慕 赦 窒 緯 遜 慨 縫 宜 乾 藩 倣 儀 鉛 暁 拶 邪 頓 鑑 項 曇 葬 曽 審 弐 丙 盆 譲 辛 鈴 既 症 瓦 籠 紹 雄 羞 盲 鍛 濫 菌 陣 柳 漬 柔 婿 眺 賊 詮 逮 鎌 矛 辱 犠 据 臭 瘍 棺 粛 隆 如 衷 幣 妬 壌 稚 碁 荒 痢 匹 漸 脅 菓 洞 甲 枢 抹 坊 即 彰 杉 刺 孔 洪 濃 唆 伎 突 含 裕 戴 痴 奴 漠 苛 寧 詣 掌 了 浸 藍 憾 疾 刃 劾 酢 裸 奨 露 徹 肝 桁 般 荘 端 逸 鈍 脂 昇 募 醸 彼 卸 琴 継 邸 抑 彙 薄 酬 紡 貢 冶 畜 飽 剤 訂 姫 舗 髪 遣 淑 閲 弦 亭 駐 叔 娘 旬 顧 妙 掃 嗣 抜 勅 押 翼 拘 概 騒 遭 遷 扉 威 慌 鐘 雷 越 滑 坑 尿 伴 轄 幻 踏 訴 執 酎 酌 涙 錬 籍 盤 挟 辣 殉 販 誓 把 婚 抽 遍 疎 凹 免 脇 雅 酵 矯 咲 剰 謎 寛 蹴 罵 侍 憶 剝 献 朱 丼 咽 廃 遡 烈 贈 偵 芋 維 悟 臆 謙 臼 墾 賭 謁 享 礁 賄 唾 錦 恨 途 擬 泰 苗 抵 錮 尽 影 扶 為 頼 捻 赴 伏 繊 挿 壁 汁 凝 窃 艇 倹 閥 吐 邦 妄 又 挫 鋳 璧 悦 吟 搭 猫 瞬 虞 嗅 憩 愚 覆 鍋 載 撮 歳 吹 禍 沸 偶 粒 旺 須 硬 罷 峡 詐 傲 庸 慢 炊 渓 氾 忙 込 頒 促 彩 釜 腺 羨 殖 融 禅 幽 粋 糾 銘 跳 膝 棄 斗 斤 購 迭 敷 狙 刈 悼 緩 欄 刑 到 虎 呈 堤 膜 斎 腕 睦 垣 叙 那 施 湿 駆 却 爆 缶 崇 宛 華 遮 妊 伺 陵 鎖 掛 舶 排 翻 朕 杯 致 鼓 軟 架 阻 飾 拉 渋 屈 惧 拠 酔 貪 僕 胴 幾 餓 祥 耗 憎 猛 曖 環 呪 昧 誉 輩 介 崩 乞 誇 霊 肢 殿 繕 俗 伯 痩 嘲 亜 凍 膚 某 艶 暇 娯 忌 遂 膨 褐 縁 繭 偉 瞳 孤 芯 蚊 股 奪 獄 稼 癖 賜 剣 貫 朽 篤 匿 餅 拙 嵐 妥 析 竜 呉 襲 脊 喚 闇 秩 換 弔 嫉 亀 串 迫 牲 汚 違 肪 肘 隣 麓 湧 賓 諮 託 椅 藤 累 箇 盗 墳 窟 寝 惑 騎 吉 恐 崖 傍 剛 瓶 款 宴 匠 頻 沃 距 蓋 慎 墜 需 溶 闘 寡 漏 喉 締 緻 幅 柵 占 称 瀬 腎 泌 嬢 飢 隠 恋 豚 薦 兼 汰 廊 循 郭 惜 塗 剖 疫 搬 啓 仙 緊 滴 淫 控 盾 哀 請 擁 升 軌 朴 澄 拐 娠 倒 巡 震 避 胎 蜜 畝 厘 柿 晶 骸 爪 筒 叱 振 裾 綱 賠 牙 衰 抄 較 妃 蜂 普 勾 悠 岸 沼 嫌 潜 替 債 凶 謹 疲 萎 眠 撲 唐 鶴 旨 餌 肯 秀 祈 醜 囚 箋 暦 倫 蛍 嘆 齢 彫 鮮 励 渡 監 堆 殴 触 霧 窯 髄 嫡 栓 貼 沙 符 滝 克 獣 拍 箸 棚 傘 療 渉 屯 踊 捜 尾 憤 旦 培 握 沈 靴 聴 痕 耐 勲 拭 頑 袖 悩 枕 韻 契 茂 褒 謡 岳 逝 漆 譜 穏 敢 僧 珠 炎 拒 尋 畏 趣 披 刹 燥 顎 謀 措 沢 濁 陰 碑 哲 遇 範 爽 封 潤 奥 麻 覇 煩 瞭 帝 慈 尉 徴 襟 鋭 衡 訟 鉢 溝 塊 該 粗 浪 栽 御 怨 零 鍵 葛 冒 霜 藻 庶 芳 乙 雰 江 払 紫 捕 逓 姻 陶 輝 拷 宵 諧 鯨 摯 弄 勘 搾 掘 紺 斑 郊 超 尼 凄 賂 愁 僚 峰 卑 壱 煙 肖 蛮 喫 佳 怒 響 袋 稿 索 但 狩 瑠 跡 浄 併 痘 没 隔 挑 双 伸 酷 僅 企 薪 滅 硫 賦 塾 掲 悔 摩 償 詰 恵 俺 透 腰 擦 煎 汎 弧 棟 涯 窮 宰 愉 戚 胆 丈 柄 網 更 冗 喝 獲 鬼 蔽 租 塑 脚 憂 侯 枠 帽 召 床 絞 麺 儒 溺 捉 噴 誰 麗 騰 慄 艦 抱 惨 忍 珍 慶 診 礎 離 羅 惰 虐 駄 唄 与 繁 殊 巧 添 憬 諦 侮 敏 陥 淡 卓 脱 侶 蛇 巨 滞 舷 暫 廷 頃 房 恭 癒 漂 魂 爵 践 玩 塚 偽 仰 丘 胞 凸 唯 戻 寿 恣 尚 釈 欺 且 援 旋 嘱 征 錯 舟 准 紛 裂 岬 蓄 叫 硝 傑 摂 陪 隅 諭 浮 踪 罰 迅 砕 奉 姓 峠 描 吏 縛 恒 迎 勧 撃 皆 拳 尻 渦 雇 畿 顕 懇 憧 賢 焦 錠 泥 斥 肩 枯 膳 媒 濯 魅 戒 微 婆 遵 睡 呂 扱 帥 詔 璃 畳 煮 壮 墨 魔 弾 冥 腫 漫 逐 弊 伐 是 嚇 哺 糧 楼 懸 俸 韓 択 虚 甚 塀 穫 堪 舞 猶 壇 妨 巾 湾 及 捗 眉 稲 遅 槽 梗 釣 怠 陳 坪 堅 紳 桑 驚 稽 冠 桟 揚 訃 薫 塔 況 歓 括 腐 貌 俊 揺 棋 簿 粘 肌 勃 戯 泡 被 頰 砲 軸 弥 厄 銃 鎮 奇 鶏 塞 寂 謄 紋 菊 浦 毀 醒 繰 恥 殻
+    </div>
+  </div>
+
+{% endblock %}
+<!-- <p>
+  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseElem" aria-expanded="false">
+    Basic jōyō kanji (1112 characters), which are studied in elementary school
+  </button>
+</p>
+<div class="collapse in" id="collapseElem">
+  <div class="card card-body">
+<section>
+  <h5>小1 (Grade 1, 80 characters)</h5>
+  <p>
+    一 右 雨 円 王 音 下 火 花 貝 学 気 九 休 玉 金 空 月 犬 見 五 口 校 左 三 山 子 四
+    糸 字 耳 七 車 手 十 出 女 小 上 森 人 水 正 生 青 夕 石 赤 千 川 先 早 草 足 村 大
+    男 竹 中 虫 町 天 田 土 二 日 入 年 白 八 百 文 木 本 名 目 立 力 林 六
+  </p>
+</section>
+<section>
+  <h5>小2 (Grade 2, 160 characters)</h5>
+  <p>
+    引 羽 雲 園 遠 何 科 夏 家 歌 画 回 会 海 絵 外 角 楽 活 間 丸 岩 顔 汽 記 帰 弓 牛
+    魚 京 強 教 近 兄 形 計 元 言 原 戸 古 午 後 語 工 公 広 交 光 考 行 高 黄 合 谷 国
+    黒 今 才 細 作 算 止 市 矢 姉 思 紙 寺 自 時 室 社 弱 首 秋 週 春 書 少 場 色 食 心
+    新 親 図 数 西 声 星 晴 切 雪 船 線 前 組 走 多 太 体 台 地 池 知 茶 昼 長 朝 直 通
+    弟 店 点 電 刀 冬 当 東 答 頭 同 道 読 内 南 肉 馬 売 買 麦 半 番 父 風 分 聞 米 歩
+    母 方 北 毎 妹 万 明 鳴 毛 門 夜 野 友 用 曜 来 里 理 話
+  </p>
+</section>
+<section>
+  <h5>小3 (Grade 3, 200 characters)</h5>
+  <p>
+    悪 安 暗 医 委 意 育 員 院 飲 運 泳 駅 央 横 屋 温 化 荷 界 開 階 寒 感 漢 館
+    起 期 客 究 急 級 宮 球 去 橋 業 曲 局 銀 区 苦 具 君 係 軽 血 決 研 県 庫 湖 向 幸
+    港 号 根 祭 皿 仕 死 使 始 指 歯 詩 次 事 持 式 実 写 者 主 守 取 酒 受 州 拾 終 習
+    集 住 重 宿 所 暑 助 昭 消 商 章 勝 乗 植 申 身 神 真 深 進 世 整 昔 全 相 送 想 息
+    速 族 他 打 対 待 代 第 題 炭 短 談 着 注 柱 丁 帳 調 追 定 庭 笛 鉄 転 都 度 投 豆
+    島 湯 登 等 動 童 農 波 配 倍 箱 畑 発 反 坂 板 皮 悲 美 鼻 筆 氷 表 秒 病 品 負 部
+    服 福 物 平 返 勉 放 味 命 面 問 役 薬 由 油 有 遊 予 羊 洋 葉 陽 様 落 流 旅 両 緑
+    礼 列 練 路 和
+  </p>
+</section>
+<section>
+  <h5>小4 (Grade 4, 202 characters)</h5>
+  <p>
+    愛 案 以 衣 位 茨 印 英 栄 媛 塩 岡 億 加 果 貨 課 芽 賀 改 械 害 街 各 覚 潟 完 官
+    管 関 観 願 岐 希 季 旗 器 機 議 求 泣 給 挙 漁 共 協 鏡 競 極 熊 訓 軍 郡 群 径 景
+    芸 欠 結 建 健 験 固 功 好 香 候 康 佐 差 菜 最 埼 材 崎 昨 札 刷 察 参 産 散 残 氏
+    司 試 児 治 滋 辞 鹿 失 借 種 周 祝 順 初 松 笑 唱 焼 照 城 縄 臣 信 井 成 省 清 静
+    席 積 折 節 説 浅 戦 選 然 争 倉 巣 束 側 続 卒 孫 帯 隊 達 単 置 仲 沖 兆 低 底 的
+    典 伝 徒 努 灯 働 特 徳 栃 奈 梨 熱 念 敗 梅 博 阪 飯 飛 必 票 標 不 夫 付 府 阜 富
+    副 兵 別 辺 変 便 包 法 望 牧 末 満 未 民 無 約 勇 要 養 浴 利 陸 良 料 量 輪 類 令
+    冷 例 連 老 労 録
+  </p>
+</section>
+<section>
+  <h5>小5 (Grade 5, 193 characters)</h5>
+  <p>
+    圧 囲 移 因 永 営 衛 易 益 液 演 応 往 桜 可 仮 価 河 過 快 解 格 確 額 刊 幹 慣 眼
+    紀 基 寄 規 喜 技 義 逆 久 旧 救 居 許 境 均 禁 句 型 経 潔 件 険 検 限 現 減 故 個
+    護 効 厚 耕 航 鉱 構 興 講 告 混 査 再 災 妻 採 際 在 財 罪 殺 雑 酸 賛 士 支 史 志
+    枝 師 資 飼 示 似 識 質 舎 謝 授 修 述 術 準 序 招 証 象 賞 条 状 常 情 織 職 制 性
+    政 勢 精 製 税 責 績 接 設 絶 祖 素 総 造 像 増 則 測 属 率 損 貸 態 団 断 築 貯 張
+    停 提 程 適 統 堂 銅 導 得 毒 独 任 燃 能 破 犯 判 版 比 肥 非 費 備 評 貧 布 婦 武
+    復 複 仏 粉 編 弁 保 墓 報 豊 防 貿 暴 脈 務 夢 迷 綿 輸 余 容 略 留 領 歴
+  </p>
+</section>
+<section>
+  <h5>小6 (Grade 6, 191 characters)</h5>
+  <p>
+    胃 異 遺 域 宇 映 延 沿 恩 我 灰 拡 革 閣 割 株 干 巻 看 簡 危 机 揮 貴 疑 吸 供 胸
+    郷 勤 筋 系 敬 警 劇 激 穴 券 絹 権 憲 源 厳 己 呼 誤 后 孝 皇 紅 降 鋼 刻 穀 骨 困
+    砂 座 済 裁 策 冊 蚕 至 私 姿 視 詞 誌 磁 射 捨 尺 若 樹 収 宗 就 衆 従 縦 縮 熟 純
+    処 署 諸 除 承 将 傷 障 蒸 針 仁 垂 推 寸 盛 聖 誠 舌 宣 専 泉 洗 染 銭 善 奏 窓 創
+    装 層 操 蔵 臓 存 尊 退 宅 担 探 誕 段 暖 値 宙 忠 著 庁 頂 腸 潮 賃 痛 敵 展 討 党
+    糖 届 難 乳 認 納 脳 派 拝 背 肺 俳 班 晩 否 批 秘 俵 腹 奮 並 陛 閉 片 補 暮 宝 訪
+    亡 忘 棒 枚 幕 密 盟 模 訳 郵 優 預 幼 欲 翌 乱 卵 覧 裏 律 臨 朗 論
+  </p>
+</section>
+</div>
+</div> -->
