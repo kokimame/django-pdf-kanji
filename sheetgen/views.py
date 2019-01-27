@@ -68,6 +68,7 @@ for font_data in FONTS:
     pdfmetrics.registerFont(TTFont(name, path))
 
 GRAY = colors.Color(red=(150 / 255), green=(150 / 255), blue=(150 / 255), alpha=0.8)
+LIGHTGRAY = colors.Color(red=(180 / 255), green=(180 / 255), blue=(180 / 255), alpha=0.3)
 NAVY = colors.Color(red=(0 / 255), green=(0 / 255), blue=(128 / 255))
 BLACK = colors.Color(0, 0, 0)
 RED30 = colors.Color(.9, 0, 0, alpha=0.3)
@@ -100,8 +101,10 @@ def export(request):
     ncol, nrow = 8, 16
     if kanji_list == []:
         kanji_list = ['' * ncol]
-    for entries in chunks(kanji_list, nrow):
-        make_a_table(can, ncol, nrow, entries)
+
+    chunked_list = [l for l in chunks(kanji_list, nrow)]
+    for i, entries in enumerate(chunked_list):
+        make_a_table(can, ncol, nrow, entries, "%d of %d" % (i+1, len(chunked_list)))
     can.save()
 
     pdf = buffer.getvalue()
@@ -110,7 +113,7 @@ def export(request):
     return response
 
 
-def make_a_table(canvas, ncol, nrow, entries):
+def make_a_table(canvas, ncol, nrow, entries, str_index):
     width, height = A4
     cell_size = 16 * mm
 
@@ -194,9 +197,43 @@ def make_a_table(canvas, ncol, nrow, entries):
     sep_x = table_x + cell_size * ncol + 0.5*mm
     canvas.setLineWidth(0.1 * mm)
     canvas.line(sep_x, table_y, sep_x, table_y + cell_size * nrow)
+    canvas.setFillColor(LIGHTGRAY)
+    rect_x, rect_y = table_x, height - 16*mm
+    canvas.roundRect(rect_x, rect_y, 70*mm, 10*mm, 1*mm, fill=1, stroke=0)
+    canvas.setFont('Hiragino', 12)
+    canvas.setFillColor(BLACK)
+    canvas.drawString(rect_x + 2*mm, rect_y +3*mm, "Joytan Kanji Practice | 漢字練習帳")
 
+    # Name with underline
+    canvas.setLineWidth(0.1 * mm)
+    canvas.setFillColor(BLACK)
+    canvas.setFont('Hiragino', 10)
+    name_x, name_y = width - 90*mm, height - 14*mm
+    canvas.drawString(name_x, name_y, "名前：")
+    canvas.line(name_x, name_y - 2*mm, name_x + 70*mm, name_y - 2*mm)
+
+    # Left footer
+    canvas.setFont('Helvetica-Bold', 10)
+    coord_msg = (table_x, table_y - 5*mm)
+    canvas.drawString(*coord_msg, "Support our project: https://kokimame.github.io/joytan/")
+    coord_index = (table_x, table_y - 12*mm)
+    canvas.drawString(*coord_index, "%s | © Joytan" % str_index)
+
+    # Right footer
+    coord_l1 = (width - 20*mm, table_y - 5 * mm)
+    coord_l2 = (width - 20*mm, table_y - 10 * mm)
+    coord_l3 = (width - 20*mm, table_y - 13 * mm)
+    canvas.setFont('Hiragino', 9)
+    canvas.drawRightString(*coord_l1, "【部首】/画数/学年 オンヨミ くんよみ")
+    canvas.setFont('Hiragino', 8)
+    canvas.drawRightString(*coord_l2, "【radical】/#stroke/grade Onyomi(Katakana) Kunyomi (Hiragana)")
+    canvas.setFont('Times-Italic', 7)
+    canvas.drawRightString(*coord_l3, "* Rough kanji-wise translation")
+
+    # Additional lines
     canvas.setDash([0.1 * mm, 1.2 * mm])
     canvas.setLineCap(1)
+
     # Dotted vertical lines
     for i in range(ncol):
         x = table_x + cell_size / 2 + cell_size * i
