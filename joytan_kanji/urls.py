@@ -16,9 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from sheetgen.views import GeneratorCreateView, export
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', GeneratorCreateView.as_view(), name='generator_form'),
     path('export/', export, name='export')
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
