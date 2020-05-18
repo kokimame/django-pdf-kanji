@@ -52,7 +52,7 @@ font_lookup = load_json("font_lookup")
 
 USER = "kokimame"
 TESTFILE = "sheetgen/testdoc.txt"
-TRANSFILE = "sheetgen/translation_results.txt".format(USER)
+TRANSFILE = "sheetgen/translation_results.txt"
 
 
 FONTS = [
