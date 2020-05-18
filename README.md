@@ -1,6 +1,6 @@
 ### Kanji Sheet Generator in PDF
 
-Restarting the development of my old Django application to experiment with Django, Docker, AWS, and some new Frontend frameworks (probably React.js)!
+Restarting the development of my old Django application to experiment with Django, Docker, AWS, and some frontend frameworks (probably React.js)!
 
 This is currently hosted on Heroku's free dynos. 
 
