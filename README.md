@@ -1,3 +1,5 @@
+# PLEASE HELP DEVELOP THE SITE
+
 ### Kanji Sheet Generator in PDF
 
 Restarting the development of my old Django application to experiment with Django, Docker, AWS, and some frontend frameworks (probably React.js)!
